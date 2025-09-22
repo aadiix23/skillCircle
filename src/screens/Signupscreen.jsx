@@ -7,7 +7,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 
 
-const Loginscreen = () => {
+const Signupscreen= ({ navigation }) => { 
   const [showPassword, setShowPassword] = useState(false);
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
   
@@ -15,14 +15,20 @@ const Loginscreen = () => {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.heading}>Log in</Text>
+        <Text style={styles.heading}>Sign Up</Text>
         <Text style={styles.subheading}>Please enter log in details below</Text>
+      </View>
+      <View>
+      <Text style={styles.textboxheading}>Name</Text>
+      <TextInput
+      style={styles.input}
+      placeholder='Enter Your Name'/>
       </View>
       <View>
       <Text style={styles.textboxheading}>Email</Text>
       <TextInput
       style={styles.input}
-      placeholder='Enter Your Mail'/>
+      placeholder='Enter Your Email'/>
       </View>
       <View>
       <Text style={styles.textboxheading}>Password</Text>
@@ -44,8 +50,7 @@ const Loginscreen = () => {
           value={toggleCheckBox}
           onValueChange={(newValue) => setToggleCheckBox(newValue)}
         />
-        <Text style={styles.checkboxtext}>Remember Password</Text>
-        <Text style={styles.forgotpasstext}>Forgot password ?</Text>
+        <Text style={styles.checkboxtext}>I agree with Privacy and policy</Text>
         </View>
          <TouchableOpacity activeOpacity={0.8} style={styles.buttonWrapper}>
           <LinearGradient
@@ -54,7 +59,7 @@ const Loginscreen = () => {
             end={{ x: 1, y: 1 }}
             style={styles.button}
           >
-            <Text style={styles.buttonText}>Log In</Text>
+            <Text style={styles.buttonText}>Sign Up</Text>
           </LinearGradient>
         </TouchableOpacity>
         <View style={styles.orContainer}>
@@ -77,8 +82,10 @@ const Loginscreen = () => {
   </TouchableOpacity>
 </View>
 <View style={styles.lastline}>
-  <Text style={styles.lastlinetxt}>Don't have an account? </Text>
-  <Text style={styles.signupText}>Sign Up</Text>
+  <Text style={styles.lastlinetxt}>Already have an account ? </Text>
+  <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+          <Text style={styles.signupText}>Log in</Text>
+        </TouchableOpacity>
 </View>
       </View>
     
@@ -87,7 +94,7 @@ const Loginscreen = () => {
   )
 }
 
-export default Loginscreen
+export default Signupscreen
 
 const styles = StyleSheet.create({
   container:{
@@ -127,7 +134,7 @@ const styles = StyleSheet.create({
     position:'absolute'
   },
   checkboxtext:{
-    fontWeight:'300',
+    fontWeight:'500',
     fontSize:13,
     top:5,
   },
