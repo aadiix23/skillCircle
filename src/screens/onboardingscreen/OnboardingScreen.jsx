@@ -10,19 +10,21 @@ const OnboardingScreen = ({ navigation }) => {
       pages={[
         {
           backgroundColor: '#faf49b',
-          image: <Image source={require('../assets/images/onboard1.png')} style={styles.image} />,
+          image: <Image source={require('../../assets/images/onboard1.png')} style={styles.image} />,
           title: ' Form a Team',
           subtitle: 'Find like-minded creators and build your dream team.',
         },
         {
           backgroundColor: '#a7f2bb',
-          image: <Image source={require('../assets/images/onboard2.png')} style={styles.image} />,
+          image: <Image source={require('../../assets/images/onboard1.png')
+} style={styles.image} />,
           title: ' Meet Developers',
           subtitle: 'Connect with skilled developers to bring your ideas to life.',
         },
         {
           backgroundColor: '#9bd5fa',
-          image: <Image source={require('../assets/images/onboard3.png')} style={styles.image} />,
+          image: <Image source={require('../../assets/images/onboard1.png')
+} style={styles.image} />,
           title: 'Raise Ideas',
           subtitle: 'Share your project concepts and get the feedback you need.',
         },

@@ -1,3 +1,4 @@
+
 import { StyleSheet, Text, TouchableOpacity, View,Image } from 'react-native'
 import { TextInput } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -7,7 +8,9 @@ import LinearGradient from 'react-native-linear-gradient';
 
 
 
-const Signupscreen= ({ navigation }) => { 
+
+
+const Loginscreen = ({ navigation }) => { 
   const [showPassword, setShowPassword] = useState(false);
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
   
@@ -15,20 +18,14 @@ const Signupscreen= ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.heading}>Sign Up</Text>
+        <Text style={styles.heading}>Log in</Text>
         <Text style={styles.subheading}>Please enter log in details below</Text>
-      </View>
-      <View>
-      <Text style={styles.textboxheading}>Name</Text>
-      <TextInput
-      style={styles.input}
-      placeholder='Enter Your Name'/>
       </View>
       <View>
       <Text style={styles.textboxheading}>Email</Text>
       <TextInput
       style={styles.input}
-      placeholder='Enter Your Email'/>
+      placeholder='Enter Your Mail'/>
       </View>
       <View>
       <Text style={styles.textboxheading}>Password</Text>
@@ -50,7 +47,8 @@ const Signupscreen= ({ navigation }) => {
           value={toggleCheckBox}
           onValueChange={(newValue) => setToggleCheckBox(newValue)}
         />
-        <Text style={styles.checkboxtext}>I agree with Privacy and policy</Text>
+        <Text style={styles.checkboxtext}>Remember Password</Text>
+        <Text style={styles.forgotpasstext}>Forgot password ?</Text>
         </View>
          <TouchableOpacity activeOpacity={0.8} style={styles.buttonWrapper}>
           <LinearGradient
@@ -59,7 +57,7 @@ const Signupscreen= ({ navigation }) => {
             end={{ x: 1, y: 1 }}
             style={styles.button}
           >
-            <Text style={styles.buttonText}>Sign Up</Text>
+            <Text style={styles.buttonText}>Log In</Text>
           </LinearGradient>
         </TouchableOpacity>
         <View style={styles.orContainer}>
@@ -70,7 +68,7 @@ const Signupscreen= ({ navigation }) => {
         <View style={styles.socialContainer}>
   <TouchableOpacity style={[styles.socialButton, { backgroundColor: '#fff', borderWidth: 1, borderColor: '#ddd' }]}>
     <Image
-  source={require('../assets/images/google.png')}
+  source={require('../../assets/images/google.png')}
   style={styles.iconSocial}
 />
     <Text style={[styles.socialText, { color: '#000' }]}>Google</Text>
@@ -82,10 +80,10 @@ const Signupscreen= ({ navigation }) => {
   </TouchableOpacity>
 </View>
 <View style={styles.lastline}>
-  <Text style={styles.lastlinetxt}>Already have an account ? </Text>
-  <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.signupText}>Log in</Text>
-        </TouchableOpacity>
+  <Text style={styles.lastlinetxt}>Don't have an account? </Text>
+  <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+        <Text style={styles.signupText}>Sign Up</Text>
+      </TouchableOpacity>
 </View>
       </View>
     
@@ -94,7 +92,7 @@ const Signupscreen= ({ navigation }) => {
   )
 }
 
-export default Signupscreen
+export default Loginscreen
 
 const styles = StyleSheet.create({
   container:{
@@ -134,7 +132,7 @@ const styles = StyleSheet.create({
     position:'absolute'
   },
   checkboxtext:{
-    fontWeight:'500',
+    fontWeight:'300',
     fontSize:13,
     top:5,
   },

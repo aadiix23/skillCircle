@@ -3,9 +3,9 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Loginscreen from '../src/screens/Loginscreen';
-import Signupscreen from '../src/screens/Signupscreen.jsx';
-import OnboardingScreen from '../src/screens/OnboardingScreen.jsx'
+import Signupscreen from '../src/screens/auth/Signupscreen.jsx';
+import Loginscreen from '../src/screens/auth/Loginscreen.jsx';
+import OnboardingScreen from '../src/screens/onboardingscreen/OnboardingScreen.jsx'
 
 const Stack = createNativeStackNavigator();
 
