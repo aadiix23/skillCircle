@@ -6,10 +6,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Signupscreen from '../src/screens/auth/Signupscreen.jsx';
 import Loginscreen from '../src/screens/auth/Loginscreen.jsx';
 import OnboardingScreen from '../src/screens/onboardingscreen/OnboardingScreen.jsx'
+import SplashScreen from 'react-native-splash-screen';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
+  React.useEffect(() => {
+    SplashScreen.hide(); 
+  }, []);
   return (
   <NavigationContainer>
      <Stack.Navigator 
