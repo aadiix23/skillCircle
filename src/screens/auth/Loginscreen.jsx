@@ -50,12 +50,13 @@ const Loginscreen = ({ navigation }) => {
         <Text style={styles.checkboxtext}>Remember Password</Text>
         <Text style={styles.forgotpasstext}>Forgot password ?</Text>
         </View>
-         <TouchableOpacity activeOpacity={0.8} style={styles.buttonWrapper}>
+         <TouchableOpacity activeOpacity={0.8} style={styles.buttonWrapper} onPress={() => navigation.navigate('SelectionScreen')}>
           <LinearGradient
             colors={['#010124', '#090979', 'rgb(22, 20, 85)']}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={styles.button}
+            
           >
             <Text style={styles.buttonText}>Log In</Text>
           </LinearGradient>
@@ -66,7 +67,7 @@ const Loginscreen = ({ navigation }) => {
          <View style={styles.line} />
         </View>
         <View style={styles.socialContainer}>
-  <TouchableOpacity style={[styles.socialButton, { backgroundColor: '#fff', borderWidth: 1, borderColor: '#ddd' }]}>
+  <TouchableOpacity style={[styles.socialButton, { backgroundColor: '#fff', borderWidth: 1, borderColor: '#ddd' }]} onPress={() => navigation.navigate('SelectionScreen')}>
     <Image
   source={require('../../assets/images/google.png')}
   style={styles.iconSocial}
@@ -74,14 +75,14 @@ const Loginscreen = ({ navigation }) => {
     <Text style={[styles.socialText, { color: '#000' }]}>Google</Text>
   </TouchableOpacity>
 
-  <TouchableOpacity style={[styles.socialButton, { backgroundColor: '#333' }]}>
+  <TouchableOpacity style={[styles.socialButton, { backgroundColor: '#333' }] } onPress={() => navigation.navigate('SelectionScreen')}>
     <FontAwesome name="github" size={20} color="#fff" style={styles.iconSocial} />
     <Text style={[styles.socialText, { color: '#fff' }]}>GitHub</Text>
   </TouchableOpacity>
 </View>
 <View style={styles.lastline}>
   <Text style={styles.lastlinetxt}>Don't have an account? </Text>
-  <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+  <TouchableOpacity onPress={() => navigation.navigate('Signup')} >
         <Text style={styles.signupText}>Sign Up</Text>
       </TouchableOpacity>
 </View>

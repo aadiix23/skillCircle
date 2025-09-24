@@ -52,12 +52,13 @@ const Signupscreen= ({ navigation }) => {
         />
         <Text style={styles.checkboxtext}>I agree with Privacy and policy</Text>
         </View>
-         <TouchableOpacity activeOpacity={0.8} style={styles.buttonWrapper}>
+         <TouchableOpacity activeOpacity={0.8} style={styles.buttonWrapper} onPress={() => navigation.navigate('SelectionScreen')}>
           <LinearGradient
             colors={['#010124', '#090979', 'rgb(22, 20, 85)']}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={styles.button}
+            onPress={() => navigation.navigate('SelectionScreen')}
           >
             <Text style={styles.buttonText}>Sign Up</Text>
           </LinearGradient>
@@ -68,7 +69,7 @@ const Signupscreen= ({ navigation }) => {
          <View style={styles.line} />
         </View>
         <View style={styles.socialContainer}>
-  <TouchableOpacity style={[styles.socialButton, { backgroundColor: '#fff', borderWidth: 1, borderColor: '#ddd' }]}>
+  <TouchableOpacity style={[styles.socialButton, { backgroundColor: '#fff', borderWidth: 1, borderColor: '#ddd' }]} onPress={() => navigation.navigate('SelectionScreen')}>
    <Image
      source={require('../../assets/images/google.png')}
      style={styles.iconSocial}
@@ -76,7 +77,7 @@ const Signupscreen= ({ navigation }) => {
     <Text style={[styles.socialText, { color: '#000' }]}>Google</Text>
   </TouchableOpacity>
 
-  <TouchableOpacity style={[styles.socialButton, { backgroundColor: '#333' }]}>
+  <TouchableOpacity style={[styles.socialButton, { backgroundColor: '#333' }]} onPress={() => navigation.navigate('SelectionScreen')}>
     <FontAwesome name="github" size={20} color="#fff" style={styles.iconSocial} />
     <Text style={[styles.socialText, { color: '#fff' }]}>GitHub</Text>
   </TouchableOpacity>
