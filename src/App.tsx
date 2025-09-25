@@ -10,6 +10,10 @@ import SplashScreen from 'react-native-splash-screen';
 import SelectionScreen from './screens/common/SelectionScreen/SelectionScreen.jsx'
 import Homescreen1 from './screens/common/HomeScreens/Homescreen1.jsx'
 import HomeScreen2 from './screens/common/HomeScreens/HomeScreen2.jsx'
+import ProfileTab from './screens/common/Tabs/ProfileTab.jsx';
+import SettingTab from './screens/common/Tabs/SettingsTab.jsx';
+import ProjectSystemTab from './screens/common/Tabs/ProjectSystemTab.jsx';
+import ProjectRoomTab from './screens/common/Tabs/ProjectRoomTab.jsx';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -19,7 +23,7 @@ const App = () => {
   return (
   <NavigationContainer>
      <Stack.Navigator 
-  initialRouteName="Onboarding"
+  initialRouteName="Homescreen1"
   screenOptions={{ headerShown: false }}
 >
   <Stack.Screen name="Signup" component={Signupscreen} />

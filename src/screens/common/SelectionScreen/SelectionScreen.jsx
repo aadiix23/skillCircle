@@ -12,7 +12,7 @@ const SelectionScreen = ({ navigation }) => {
             <TouchableOpacity style={styles.button1} 
             activeOpacity={0.8}
             onPress={()=>{navigation.navigate("Homescreen1") }}>
-                <Text style={styles.text}>Home1</Text>
+                <Text style={styles.text}>Code Crew</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.button1} onPress={()=>{navigation.navigate("HomeScreen2")}}>
                 <Text style={styles.text}>Home2</Text>
