@@ -4,6 +4,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ProfileTab from '../Tabs/ProfileTab';
 import SettingsTab from '../Tabs/SettingsTab';
+import ProjectRoomTab from '../Tabs/ProjectRoomTab';
+import ProjectSystemTab from '../Tabs/ProjectSystemTab';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { Color } from 'react-native/types_generated/Libraries/Animated/AnimatedExports';
 
  const Tab = createBottomTabNavigator();
 
@@ -11,10 +15,29 @@ const Homescreen1 = () => {
  
   return (
     <View style={styles.container}>
-      <Tab.Navigator>
-        <Tab.Screen name="ProfileTab" component={ProfileTab} />
-        <Tab.Screen name="SettingTab" component={SettingsTab} />
-      </Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={({route})=>({
+          headerShown: false,   
+          tabBarIcon:({focused,color,size})=>{
+            let iconName;
+             if (route.name === 'Profile') {
+            iconName = 'user';         
+          } else if (route.name === 'Setting') {
+            iconName = 'cog';         
+          } else if (route.name === 'ProjectRoom') {
+            iconName = 'group';       
+          } else if (route.name === 'ProjectSystem') {
+            iconName = 'code';         
+          }
+            return <FontAwesome name={iconName} size={size} color={color} />;
+          },
+        })}
+>
+  <Tab.Screen name="Profile" component={ProfileTab} />
+  <Tab.Screen name="ProjectRoom" component={ProjectRoomTab} />
+  <Tab.Screen name="ProjectSystem" component={ProjectSystemTab} />
+  <Tab.Screen name="Setting" component={SettingsTab} />
+</Tab.Navigator>
         </View>
   )
 }

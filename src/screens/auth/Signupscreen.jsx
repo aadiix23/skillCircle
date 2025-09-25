@@ -123,6 +123,7 @@ const styles = StyleSheet.create({
   width: '94%',     
   borderColor: '#ccc',
   borderWidth: 1,
+  height:40,
   borderRadius: 8,
   paddingHorizontal: 10,
   marginTop: 10,

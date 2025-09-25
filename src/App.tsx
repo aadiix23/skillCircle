@@ -16,14 +16,16 @@ import ProjectSystemTab from './screens/common/Tabs/ProjectSystemTab.jsx';
 import ProjectRoomTab from './screens/common/Tabs/ProjectRoomTab.jsx';
 const Stack = createNativeStackNavigator();
 
+
 const App = () => {
+  
   React.useEffect(() => {
     SplashScreen.hide(); 
   }, []);
   return (
   <NavigationContainer>
      <Stack.Navigator 
-  initialRouteName="Homescreen1"
+  initialRouteName="Onboarding"
   screenOptions={{ headerShown: false }}
 >
   <Stack.Screen name="Signup" component={Signupscreen} />

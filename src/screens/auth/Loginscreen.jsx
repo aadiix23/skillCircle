@@ -122,14 +122,15 @@ const styles = StyleSheet.create({
   borderColor: '#ccc',
   borderWidth: 1,
   borderRadius: 8,
-  paddingHorizontal: 10,
+  height:40,
+  paddingHorizontal: 18,
   marginTop: 10,
   backgroundColor: '#fff',
-  fontSize: 17,
+  fontSize: 20,
   },
   icon:{
     right:35,
-    marginTop:65,
+    marginTop:55,
     position:'absolute'
   },
   checkboxtext:{
