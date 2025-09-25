@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View ,Image} from 'react-native'
 import { Picker } from '@react-native-picker/picker';
 import React, { useState } from "react";
 import { Dropdown } from 'react-native-element-dropdown';
@@ -14,10 +14,16 @@ const SelectionScreen = ({ navigation }) => {
             <TouchableOpacity style={styles.button1} 
             activeOpacity={0.8}
             onPress={()=>{navigation.navigate("Homescreen1") }}>
-                <Text style={styles.textbox}>Code Crew</Text>
+                 <Image 
+          source={require('../../../assets/images/google.png')} resizeMode='contain'
+          style={styles.images}
+        />
             </TouchableOpacity>
             <TouchableOpacity style={styles.button1} onPress={()=>{navigation.navigate("HomeScreen2")}}>
-                <Text style={styles.textbox}>Home2</Text>
+                <Image 
+          source={require('../../../assets/images/google.png')} resizeMode='contain'
+          style={styles.images}
+        />
             </TouchableOpacity>
         </View>
     </View>
@@ -39,21 +45,26 @@ const styles = StyleSheet.create({
       fontSize:11,
     },
     Buttoncontainer:{
-    padding:1,
-    backgroundColor:"#000000",
-      flex:1,
+    justifyContent:'center',
+    marginTop:32,
+    alignItems:"center"
+      
+      
     },
     button1:{
-        backgroundColor:'#ECEEDF',
-        padding:100,
-        margin:100,
-        borderRadius:'50%'
-        
-        
+    backgroundColor:'#ECEEDF',
+    width:200,
+    height:200,
+    borderRadius:100,
+    justifyContent:'center',
+    margin:50,
+    alignItems:'center',
+    overflow:'hidden',   
     },
-    text:{
+    textbox:{
         fontSize:26,
         padding:26,
+        textAlign:'center'
         
     },
     heading:{
@@ -76,4 +87,10 @@ const styles = StyleSheet.create({
       fontSize:22,
       fontWeight:'500'
     },
+    images:{
+        width: "100%",
+    height: "100%",
+    resizeMode: "cover" 
+    },
+    
 })
