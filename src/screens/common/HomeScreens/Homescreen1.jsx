@@ -20,6 +20,9 @@ const Homescreen1 = () => {
       initialRouteName="Home"
         screenOptions={({route})=>({
           headerShown: false,   
+           tabBarActiveTintColor: '#FF8800',   // selected tab ka color
+            tabBarInactiveTintColor: 'gray',
+          
           tabBarIcon:({focused,color,size})=>{
             let iconName;
              if (route.name === 'Profile') {
