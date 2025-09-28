@@ -4,7 +4,7 @@ import React from 'react'
 const ProfileTab = () => {
   return (
     <View>
-     
+      <Text>ProfileTab</Text>
     </View>
   )
 }

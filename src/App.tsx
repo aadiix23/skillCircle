@@ -14,7 +14,7 @@ import ProfileTab from './screens/common/Tabs/ProfileTab.jsx';
 import SettingTab from './screens/common/Tabs/SettingsTab.jsx';
 import ProjectSystemTab from './screens/common/Tabs/ProjectSystemTab.jsx';
 import ProjectRoomTab from './screens/common/Tabs/ProjectRoomTab.jsx';
-import userInfo from './screens/UserSettings/userInfo.jsx';
+import Home from './screens/common/Tabs/hometab.jsx';
 const Stack = createNativeStackNavigator();
 
 
@@ -26,7 +26,7 @@ const App = () => {
   return (
   <NavigationContainer>
      <Stack.Navigator 
-  initialRouteName="UserInfo"
+  initialRouteName="Onboarding"
   screenOptions={{ headerShown: false }}
 >
   <Stack.Screen name="Signup" component={Signupscreen} />
@@ -39,7 +39,7 @@ const App = () => {
    <Stack.Screen name="SelectionScreen" component={SelectionScreen}/>
    <Stack.Screen name="Homescreen1" component={Homescreen1}/>
   <Stack.Screen name="HomeScreen2" component={HomeScreen2}/>
-  <Stack.Screen name="UserInfo" component={userInfo}/>
+  <Stack.Screen name="Profile" component={ProfileTab}/>
 </Stack.Navigator>
   </NavigationContainer>
   )

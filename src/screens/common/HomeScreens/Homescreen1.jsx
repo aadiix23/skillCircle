@@ -6,6 +6,7 @@ import ProfileTab from '../Tabs/ProfileTab';
 import SettingsTab from '../Tabs/SettingsTab';
 import ProjectRoomTab from '../Tabs/ProjectRoomTab';
 import ProjectSystemTab from '../Tabs/ProjectSystemTab';
+import HomeTab from '../Tabs/hometab';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Color } from 'react-native/types_generated/Libraries/Animated/AnimatedExports';
 
@@ -16,6 +17,7 @@ const Homescreen1 = () => {
   return (
     <View style={styles.container}>
       <Tab.Navigator
+      initialRouteName="Home"
         screenOptions={({route})=>({
           headerShown: false,   
           tabBarIcon:({focused,color,size})=>{
@@ -29,12 +31,16 @@ const Homescreen1 = () => {
           } else if (route.name === 'ProjectSystem') {
             iconName = 'code';         
           }
+          else if (route.name === 'Home') {
+            iconName = 'home';         
+          }
             return <FontAwesome name={iconName} size={size} color={color} />;
           },
         })}
 >
   <Tab.Screen name="Profile" component={ProfileTab} />
   <Tab.Screen name="ProjectRoom" component={ProjectRoomTab} />
+  <Tab.Screen name="Home" component={HomeTab} />
   <Tab.Screen name="ProjectSystem" component={ProjectSystemTab} />
   <Tab.Screen name="Setting" component={SettingsTab} />
 </Tab.Navigator>
