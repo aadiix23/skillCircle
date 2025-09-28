@@ -17,11 +17,11 @@ const Loginscreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <View style={{}}><Text style={{fontSize:24, paddingTop:11,}}>Code Crew</Text></View>
+      <View style={{}}><Text style={{fontSize:24, paddingTop:17,fontWeight:'600'}}>Code Crew</Text></View>
       <View>
        <View style={{ flexDirection:'row',alignItems:'center'}}> <Text style={styles.heading}>Welcome</Text><Text style={{fontSize:26,
     fontWeight:'400',
-    marginTop:40,}}> Back!</Text></View>
+    marginTop:25,color:'#838383'}}> Back!</Text></View>
         <Text style={styles.subheading}>Enter Your Login Information</Text>
       </View>
       <View>
@@ -46,24 +46,13 @@ const Loginscreen = ({ navigation }) => {
         <View style={styles.checkboxflex}>
         <CheckBox
           disabled={false}
-           tintColors={{ true: '#141654', false: '#999' }}
+           tintColors={{ true: '#FF8800', false: '#999' }}
           value={toggleCheckBox}
           onValueChange={(newValue) => setToggleCheckBox(newValue)}
         />
         <Text style={styles.checkboxtext}>Remember Password</Text>
         <Text style={styles.forgotpasstext}>Forgot password ?</Text>
         </View>
-         <TouchableOpacity activeOpacity={0.8} style={styles.buttonWrapper} onPress={() => navigation.navigate('SelectionScreen')}>
-          <LinearGradient
-            colors={['#010124', '#090979', 'rgb(22, 20, 85)']}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 1 }}
-            style={styles.button}
-            
-          >
-            <Text style={styles.buttonText}>Log In</Text>
-          </LinearGradient>
-        </TouchableOpacity>
         <View style={styles.orContainer}>
         <View style={styles.line} />
          <Text style={styles.orText}>OR</Text>
@@ -83,12 +72,24 @@ const Loginscreen = ({ navigation }) => {
     <Text style={[styles.socialText, { color: '#fff' }]}>GitHub</Text>
   </TouchableOpacity>
 </View>
+<View style={styles.bottombar}>
 <View style={styles.lastline}>
   <Text style={styles.lastlinetxt}>Don't have an account? </Text>
   <TouchableOpacity onPress={() => navigation.navigate('Signup')} >
         <Text style={styles.signupText}>Sign Up</Text>
-      </TouchableOpacity>
+      </TouchableOpacity>    
 </View>
+<TouchableOpacity activeOpacity={0.8} style={styles.buttonWrapper} onPress={() => navigation.navigate('SelectionScreen')}>
+          <LinearGradient
+            colors={['#FF8800', '#FF8800', 'rgb(244, 128, 50)']}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={styles.button}
+          >
+            <Text style={styles.buttonText}>Log In</Text>
+          </LinearGradient>
+        </TouchableOpacity>
+        </View>
       </View>
     
     
@@ -108,12 +109,13 @@ const styles = StyleSheet.create({
   heading:{
     fontSize:26,
     fontWeight:'600',
-    marginTop:40,
+    marginTop:25,
     color:'#FF8800',
   },
   subheading:{
   fontSize: 16,
-  fontWeight:'300'
+  fontWeight:'400',
+  color:'#838383'
   },
   textboxheading:{
     marginTop:20,
@@ -134,33 +136,37 @@ const styles = StyleSheet.create({
   },
   icon:{
     right:35,
-    marginTop:55,
+    marginTop:62,
     position:'absolute'
   },
   checkboxtext:{
-    fontWeight:'300',
-    fontSize:13,
+    fontWeight:'500',
+    fontSize:15,
     top:5,
+  color:"#838383"
   },
   checkboxflex:{
-    flexDirection:'row'
+    flexDirection:'row',
+    marginTop:13,
   },
   forgotpasstext:{
-    fontWeight:'300',
-    fontSize:13,
+    fontWeight:'500',
+    fontSize:15,
     top:5,
-    left:55,
+    left:58,
+    color:"#FF8800"
   },
   buttonText:{
 fontSize:20,
-width:300,
+width:350,
 color:'#FFFFFF',
-textAlign:'center'
+textAlign:'center',
+fontWeight:'800',
   },
 buttonWrapper:{
   borderRadius:'8',
 alignItems:'center',
-marginTop:10,
+
 },
 button:{
 borderRadius:10,
@@ -180,8 +186,8 @@ line: {
 },
 orText: {
   marginHorizontal: 10,
-  fontSize: 12,
-  color: '#555'
+  fontSize: 15,
+  color: '#D9D9D9'
 },
 socialContainer: {
   flexDirection: 'row',
@@ -209,15 +215,20 @@ socialText: {
 lastline: {
   flexDirection: 'row',
   justifyContent: 'center',
-  marginTop: 20,
+  
 },
 lastlinetxt: {
-  fontSize: 14,
+  fontSize: 15,
   color: '#555',
+  paddingLeft:130,
+  marginBottom:5,
 },
 signupText: {
   fontSize: 14,
-  color: 'navy',  
+  color: '#FF8800',  
   fontWeight: 'bold',
+},
+bottombar:{
+marginTop:280,
 }
 })
