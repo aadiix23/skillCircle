@@ -15,16 +15,19 @@ const SelectionScreen = ({ navigation }) => {
             activeOpacity={0.8}
             onPress={()=>{navigation.navigate("Homescreen1") }}>
                  <Image 
-          source={require('../../../assets/images/google.png')} resizeMode='contain'
+          source={require('../../../assets/images/skill2.png')} resizeMode='contain'
           style={styles.images}
         />
+                <Text style={styles.buttonText}>Startup Focused</Text>
             </TouchableOpacity>
+            <Text style={styles.buttonText}>Skill Development</Text>
             <TouchableOpacity style={styles.button1} onPress={()=>{navigation.navigate("HomeScreen2")}}>
                 <Image 
-          source={require('../../../assets/images/google.png')} resizeMode='contain'
+          source={require('../../../assets/images/startupfocus2.png')} resizeMode='contain'
           style={styles.images}
         />
             </TouchableOpacity>
+             <Text style={styles.buttonText}>Skill Focused</Text>
         </View>
     </View>
     
@@ -85,12 +88,20 @@ const styles = StyleSheet.create({
       textAlign:'center',
       color:'#838383',
       fontSize:22,
+     letterSpacing:1.9,
       fontWeight:'500'
     },
     images:{
         width: "100%",
-    height: "100%",
+    height: "180%",
     resizeMode: "cover" 
     },
+    buttonText:{
+      fontSize:24,
+      letterSpacing:1.4,
+      color:'#747474',
+      paddingBottom:1,
+      
+    }
     
 })

@@ -17,12 +17,15 @@ const Loginscreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <View style={{}}><Text style={{fontSize:24, paddingTop:11,}}>Code Crew</Text></View>
       <View>
-        <Text style={styles.heading}>Log in</Text>
-        <Text style={styles.subheading}>Please enter log in details below</Text>
+       <View style={{ flexDirection:'row',alignItems:'center'}}> <Text style={styles.heading}>Welcome</Text><Text style={{fontSize:26,
+    fontWeight:'400',
+    marginTop:40,}}> Back!</Text></View>
+        <Text style={styles.subheading}>Enter Your Login Information</Text>
       </View>
       <View>
-      <Text style={styles.textboxheading}>Email</Text>
+      <Text style={styles.textboxheading}>Email Address</Text>
       <TextInput
       style={styles.input}
       placeholder='Enter Your Mail'/>
@@ -31,7 +34,7 @@ const Loginscreen = ({ navigation }) => {
       <Text style={styles.textboxheading}>Password</Text>
       <TextInput
       style={styles.input}
-      placeholder='Enter Your Password'
+      placeholder='Password'
       />
       <FontAwesome
           name={showPassword ? "eye" : "eye-slash"}
@@ -106,7 +109,7 @@ const styles = StyleSheet.create({
     fontSize:26,
     fontWeight:'600',
     marginTop:40,
-    fontFamily:'AlanSans-Regular', 
+    color:'#FF8800',
   },
   subheading:{
   fontSize: 16,
@@ -116,10 +119,11 @@ const styles = StyleSheet.create({
     marginTop:20,
     fontSize:18,
     fontWeight:600,
+    color:'#838383'
   },
   input:{
   width: '94%',     
-  borderColor: '#ccc',
+  borderColor: '#FF8800',
   borderWidth: 1,
   borderRadius: 8,
   height:40,

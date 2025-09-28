@@ -29,7 +29,11 @@ const App = () => {
   screenOptions={{ headerShown: false }}
 >
   <Stack.Screen name="Signup" component={Signupscreen} />
-  <Stack.Screen name="Login" component={Loginscreen} />
+ <Stack.Screen 
+  name="Login" 
+  component={Loginscreen} 
+  options={{ headerShown: false, title: "CodeCrew", headerBackVisible: false }} 
+/>
   <Stack.Screen name="Onboarding" component={OnboardingScreen} />
    <Stack.Screen name="SelectionScreen" component={SelectionScreen}/>
    <Stack.Screen name="Homescreen1" component={Homescreen1}/>

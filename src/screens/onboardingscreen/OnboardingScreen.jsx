@@ -70,7 +70,7 @@ const OnboardingScreen = ({ navigation }) => {
           if (pageIndex < pages.length - 1) {
             setPageIndex(pageIndex + 1);
           } else {
-            navigation.replace('SelectionScreen');
+            navigation.replace('Signup');
           }
         }}
       >
