@@ -26,7 +26,7 @@ const App = () => {
   return (
   <NavigationContainer>
      <Stack.Navigator 
-  initialRouteName="ProjectHome"
+  initialRouteName="Onboarding"
   screenOptions={{ headerShown: false }}
 >
   <Stack.Screen name="Signup" component={Signupscreen} />

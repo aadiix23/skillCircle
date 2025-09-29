@@ -17,7 +17,7 @@ const ProjectRoomTab = () => {
             placeholder='Search'
           />
           <TouchableOpacity style={styles.filterIcon}>
-            <FontAwesome name="filter" size={20} color="#555" />
+            <FontAwesome name="filter" size={20} color="#B1B1B1" />
           </TouchableOpacity>
         </View>
       </View>
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     height: 40,
     width: 190,
+    borderColor:'#B1B1B1'
   },
   searchbox: {
     flex: 1,
