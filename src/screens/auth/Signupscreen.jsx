@@ -226,7 +226,7 @@ const styles = StyleSheet.create({
     flex:1,
     backgroundColor:"#ffffff",
     paddingHorizontal:14,
-    paddingTop:12,
+    marginTop:25,
   },
   heading:{
     fontSize:23,
@@ -255,6 +255,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
     backgroundColor: '#fff',
     fontSize: 16,
+    elevation:25,
   },
   inputnames:{     
     flex:1,
@@ -262,6 +263,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 6,
     height:42,
+    elevation:25,
     paddingHorizontal: 14,
     marginTop: 8,
     backgroundColor: '#fff',
@@ -300,11 +302,13 @@ const styles = StyleSheet.create({
     borderRadius:6,
     alignItems:'center',
     marginTop:5,
+    elevation:25,
   },
   button:{
     borderRadius:8,
     paddingVertical:12,
     width:'100%',
+    elevation:25,
   },
   orContainer: {
     flexDirection: 'row',
@@ -333,7 +337,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingVertical:10,
     borderRadius: 6,
-    marginHorizontal:6,      
+    marginHorizontal:6,   
+    elevation:25,   
   },
   iconSocial: {
     width:18,
